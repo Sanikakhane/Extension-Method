@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace sample
 {
@@ -8,17 +7,25 @@ namespace sample
     {
         public static void Main(string[] args)
         {
-             List<int> list = new List<int>() { 1, 2, 3 };
-            list.Average();
-            // printElement(list);
-            list.printElement();
-            Console.WriteLine(list.Average()); 
+            List<int> numbers = new List<int>() { 1, 2, 3, 4, 5 };
+            numbers.PrintElements();
+            Console.WriteLine($"Average: {numbers.Average()}");
 
-            dog d= new dog();
-            d.sleeping();
             
+            Dog dog = new Dog();
+            Cat cat = new Cat();
+
+            dog.DisplayType();
+            dog.Sleeping();
+            dog.MakeSound();
+
+            cat.DisplayType();
+            cat.Sleeping();
+            cat.MakeSound();
+
+            string sampleText = "Hello Extension Methods!";
+            int vowelCount = sampleText.CountVowels();
+            Console.WriteLine($"The string \"{sampleText}\" has {vowelCount} vowels.");
         }
-        
     }
-    
 }
